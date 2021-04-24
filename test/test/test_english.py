@@ -9,6 +9,3 @@ class englishTest(unittest.TestCase):
 
 	def test_smallAndBig(self):
 		self.assertEqual(englishString.smallAndBig(), self.english + self.english.upper())
-
-	def test_smallAndBigPunctuation(self):
-		self.assertEqual(englishString.commonChars(), self.english + self.english.upper() + ',.":;!?() \n' + "'")

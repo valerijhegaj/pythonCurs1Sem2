@@ -5,3 +5,4 @@ from test.test_CaesarCipher 		import CaesarCipherTest
 from test.test_interaction			import interactionTest
 from test.test_VegenerCipher		import VegenerCipherTest
 from test.test_Vernam				import VernamTest
+from test.test_interface			import interfaceTest

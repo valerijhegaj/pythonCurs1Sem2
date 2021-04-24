@@ -1,28 +1,28 @@
 from CaesarCipher.RSS import RSS
 
 class CaesarCipher:
-    def _ecryptionCharWithBig(n, k, alphabet, char):
+    def _ecryptionCharWithBig(n, key, alphabet, char):
         if alphabet.get(char, -1) == -1:
             return char
-        return alphabet[(alphabet[char] + k) % n]
+        return alphabet[(alphabet[char] + key) % n]
 
-    def _ecryptionChar(n, k, alphabet, char):
+    def _ecryptionChar(n, key, alphabet, char):
         if alphabet.get(char.lower(), -1) == -1:
             return char
-        ans = alphabet[(alphabet[char.lower()] + k) % n]
+        ans = alphabet[(alphabet[char.lower()] + key) % n]
         if char.isupper():
             ans = ans.upper()
         return ans
 
-    def encryption(k, alphabet, text):
+    def encryption(key, alphabet, text):
         n = len(alphabet) // 2
         ans = ''
         for i in range(len(text)):
-            ans += CaesarCipher._ecryptionChar(n, k, alphabet, text[i])
+            ans += CaesarCipher._ecryptionChar(n, key, alphabet, text[i])
         return ans
 
-    def decryption(k, alphabet, text):
-        return CaesarCipher.encryption(-k, alphabet, text)
+    def decryption(key, alphabet, text):
+        return CaesarCipher.encryption(-key, alphabet, text)
     
     def _countTextFrequency(alphabet, text):
         data = [0] * (len(alphabet) // 2)
