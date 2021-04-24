@@ -1,0 +1,53 @@
+What's "meh"
+
+Forced indentation. Some love it because it enforces consistency and a degree of readability. Some hate it because it enforces the wrong consistency. Objectively it's neither good nor bad.
+Dynamic typing. There are lots of dynamically-typed languages and lots of statically-typed languages. Which kind of typing is better isn't a Python debate, it's a general programming debate.
+What's bad
+
+400 (more or less) ways to interpolate strings. This prints "Hello Robin!" 3 times:
+
+user = {'name': "Robin"}
+print(f"Hello {user['name']}!")
+print("Hello {name}!".format(**user))
+print("Hello %(name)s!" % user)
+If there was a unique and obvious use-case for each of these then that would be one thing, but there's not.
+
+69 top-level functions that you have to just memorize. GvR's explanation makes sense in theory, but is really annoying in practice.
+
+map and enumerate are not interchangeable with list, though 99% of the time you end up converting them to lists with list(). Alternatively you use a list comprehension, which, speaking of...
+
+List comprehensions are held up as an excellent recent-ish addition to Python. People say they're readable. That's true for simple examples (e.g. [x**2 for x in range(10)]) but horribly untrue for slightly more complex examples (e.g. [[row[i] for row in matrix] for i in range(4)]). I chalk this up to...
+
+Weird ordering in ternary/one-line expressions. Most languages follow a consistent order where first you declare conditions, then you do stuff based the on those conditions:
+
+if user.isSignedIn then user.greet else error
+for user in signedInUsers do user.greet
+Python does this in the opposite order:
+
+user.greet if user.isSignedIn else error
+[user.greet for user in signedInUsers]
+This is great for simple examples. It's unhelpful for more complex logic where you have to find and look at the middle of the expression before you can really understand what you're reading.
+
+Syntax for tuples. If you write a single-item (tuple,) but forget the trailing comma, it's no longer a tuple but an expression. This is a really easy mistake to make. Considering the only difference between tuples and lists is mutability, it would make much more sense to use the same [syntax] as lists, which does not require a trailing comma, and add a freeze or immutable method. Speaking of...
+
+There's no way to make dicts or complex objects immutable.
+
+Regular expressions require a lot of boilerplate:
+
+re.compile(r"regex", re.I | re.M)
+Compared to JavaScript or Ruby:
+
+/regex/ig
+The goofy string literal syntaxes: f'', u'', b'', r''.
+
+The many "magic" double-underscore attributes that you just have to memorize.
+
+You can't reliably catch all errors and their messages in one statement. Instead you have to use something like sys.exc_info()[0].
+
+What's bad about the culture
+
+Most programmers will acknowledge criticisms of their favorite language. Pythonists will say, "You just don't understand Python."
+
+Most programmers will say that a piece of code is shoddy because it is inefficient or hard to read. Pythonists will also tell you whether or not they think it's "Pythonic", which feels about as helpful as someone saying your taste in music "isn't cultured enough."
+
+Pythonists have a bit of a superiority complex.

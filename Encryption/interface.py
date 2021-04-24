@@ -11,7 +11,7 @@ while not(isFinish):
         elif inputWord[1] == '-d':
             main.CaesarDecryption(inputWord[2], int(inputWord[3]))
         else:
-            print('error')
+            print('there is no such command')
     elif inputWord[0] == 'HackCaesar':
         main.HackCaesar(inputWord[1])
     elif inputWord[0] == 'vigener':
@@ -20,7 +20,7 @@ while not(isFinish):
         elif inputWord[1] == '-d':
             main.VigenerDecryption(inputWord[2], inputWord[3])
         else:
-            print('error')
+            print('there is no such command')
     elif inputWord[0] == 'vernam':
         if inputWord[1] == '-e':
             main.VernamEncryption(inputWord[2], inputWord[3])
@@ -35,6 +35,6 @@ while not(isFinish):
         elif inputWord[1] == '-dk':
             main.VernamDecryptionKey(inputWord[2], inputWord[3])
         else:
-            print('error')
+            print('there is no such command')
     else:
-        print('error')
+        print('there is no such command')
