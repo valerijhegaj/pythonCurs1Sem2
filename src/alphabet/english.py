@@ -1,9 +1,9 @@
-class englishString:
+class EnglishString:
     def small():
         return 'abcdefghijklmnopqrstuvwxyz'
 
-    def smallAndBig():
-        return englishString.small() + englishString.small().upper()
+    def small_and_big():
+        return EnglishString.small() + EnglishString.small().upper()
 
-    def commonChars():
-        return englishString.smallAndBig() + '!@#$%^&*()_+=-;.,:№"{}[]|\\?/<>~`±§¡™£¢∞¶•ªº≠œ∑´®†¥¨ˆøπ“‘åß∂ƒ©˙∆˚…æ«Ω≈ç√∫˜ \n' + "'"
+    def common_chars():
+        return EnglishString.small_and_big() + '!@#$%^&*()_+=-;.,:№"{}[]|\\?/<>~`±§¡™£¢∞¶•ªº≠œ∑´®†¥¨ˆøπ“‘åß∂ƒ©˙∆˚…æ«Ω≈ç√∫˜ \n' + "'"

@@ -1,73 +1,73 @@
 import unittest
-from frontend 		import interface
-from alphabet		import alphabet
-from interaction 	import interaction
-from CaesarCipher 	import CaesarCipher
-from VegenerCipher 	import VegenerCipher
-from Vernam 		import Vernam
+from frontend 		import Interface
+from alphabet		import Alphabet
+from interaction 	import Interaction
+from caesar_cipher 	import CaesarCipher
+from vegener_cipher import VegenerCipher
+from vernam 		import Vernam
 
-class interfaceTest(unittest.TestCase):
-	def interfaceCaesarCipherCommon(self, is_encry):
-		text = interaction.read('test_read3.txt')
-		interaction.write('test_CaesarCipher.txt', text)
-		interface.CaesarCipherCommon('test_CaesarCipher.txt', 'test_CaesarCipher.txt', 10, is_encry)
-		en = alphabet()
-		en.createSmall()
+class InterfaceTest(unittest.TestCase):
+	def interface_caesar_cipher_common(self, is_encry):
+		text = Interaction.read('test_read3.txt')
+		Interaction.write('test_CaesarCipher.txt', text)
+		Interface.caesar_cipher_common('test_CaesarCipher.txt', 'test_CaesarCipher.txt', 10, is_encry)
+		en = Alphabet()
+		en.create_small()
 		if is_encry:
 			text = CaesarCipher.encryption(10, en, text)
 		else:
 			text = CaesarCipher.decryption(10, en, text)
-		self.assertEqual(text, interaction.read('test_CaesarCipher.txt'))
+		self.assertEqual(text, Interaction.read('test_CaesarCipher.txt'))
 
-	def test_interfaceCaesarCipherEncryption(self):
-		self.interfaceCaesarCipherCommon(1)
+	def test_interface_caesar_cipher_encryption(self):
+		self.interface_caesar_cipher_common(1)
 
-	def test_interfaceCaesarCipherDecryption(self):
-		self.interfaceCaesarCipherCommon(0)
+	def test_interface_caesar_cipher_decryption(self):
+		self.interface_caesar_cipher_common(0)
 
-	def test_interfaceCaesarHack(self):
-		self.interfaceCaesarCipherCommon(1)
-		interface.CaesarCipherHack('test_CaesarCipher.txt', 'test_CaesarCipher.txt')
-		self.assertEqual(interaction.read('test_read3.txt'), interaction.read('test_CaesarCipher.txt'))
+	def test_InterfaceCaesarHack(self):
+		self.interface_caesar_cipher_common(1)
+		Interface.caesar_cipher_hack('test_CaesarCipher.txt', 'test_CaesarCipher.txt')
+		self.assertEqual(Interaction.read('test_read3.txt'), Interaction.read('test_CaesarCipher.txt'))
 
-	def interfaceVegenerCipherCommon(self, is_encry):
-		text = interaction.read('test_read3.txt')
-		interaction.write('test_VegenerCipher.txt', text)
-		interface.VegenerCipherCommon('test_VegenerCipher.txt', 'test_VegenerCipher.txt', "python", is_encry)
-		en = alphabet()
-		en.createSmallAndBig()
+	def interface_vegener_cipher_common(self, is_encry):
+		text = Interaction.read('test_read3.txt')
+		Interaction.write('test_VegenerCipher.txt', text)
+		Interface.vegener_cipher_common('test_VegenerCipher.txt', 'test_VegenerCipher.txt', "python", is_encry)
+		en = Alphabet()
+		en.create_small_and_big()
 		if is_encry:
 			text = VegenerCipher.encryption(en, "python", text)
 		else:
 			text = VegenerCipher.decryption(en, "python", text)
-		self.assertEqual(text, interaction.read('test_VegenerCipher.txt'))
+		self.assertEqual(text, Interaction.read('test_VegenerCipher.txt'))
 
-	def test_interfaceVegenerCipherEncryption(self):
-		self.interfaceVegenerCipherCommon(1)
+	def test_InterfaceVegenerCipherEncryption(self):
+		self.interface_vegener_cipher_common(1)
 
-	def test_interfaceVegenerCipherDecryption(self):
-		self.interfaceVegenerCipherCommon(0)
+	def test_InterfaceVegenerCipherDecryption(self):
+		self.interface_vegener_cipher_common(0)
 
-	def interfaceVernamCommon(self, is_generate, is_encry):
-		text = interaction.read('test_VernamCipher.txt')
-		en = alphabet()
-		en.createCommonChars()
-		interface.VernamCommon('test_VernamCipher.txt', 'test_VernamKey.txt', is_generate, 'test_VernamCipher.txt', is_encry)
+	def interface_vernam_common(self, is_generate, is_encry):
+		text = Interaction.read('test_VernamCipher.txt')
+		en = Alphabet()
+		en.create_common_chars()
+		Interface.vernam_common('test_VernamCipher.txt', 'test_VernamKey.txt', is_generate, 'test_VernamCipher.txt', is_encry)
 		
-		key = interaction.read('test_VernamKey.txt')
+		key = Interaction.read('test_VernamKey.txt')
 
 		if is_encry:
 			text = Vernam.encryption(en, key, text)
 		else:
 			text = Vernam.decryption(en, key, text)
-		self.assertEqual(text, interaction.read('test_VernamCipher.txt'))
+		self.assertEqual(text, Interaction.read('test_VernamCipher.txt'))
 
-	def test_interfaceVernamGenerate(self):
-		self.interfaceVernamCommon(1, 1)
-		self.interfaceVernamCommon(0, 0)
+	def test_InterfaceVernamGenerate(self):
+		self.interface_vernam_common(1, 1)
+		self.interface_vernam_common(0, 0)
 
-	def test_interfaceVernamEncryption(self):
-		self.interfaceVernamCommon(0, 1)
+	def test_InterfaceVernamEncryption(self):
+		self.interface_vernam_common(0, 1)
 
-	def test_interfaceVernamDecryption(self):
-		self.interfaceVernamCommon(0, 0)
+	def test_InterfaceVernamDecryption(self):
+		self.interface_vernam_common(0, 0)

@@ -1,1 +1,1 @@
-from frontend.interface import interface
+from frontend.interface import Interface

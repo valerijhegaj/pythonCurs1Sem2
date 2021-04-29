@@ -1,4 +1,4 @@
-class dicting:
+class Dicting:
     def create(alph):
         ans = dict()
         for i in range(len(alph)):

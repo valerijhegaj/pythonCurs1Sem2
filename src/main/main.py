@@ -2,39 +2,39 @@ import sys
 import os
 sys.path.append(os.path.join(sys.path[0], ".."))
 
-from frontend import interface
+from frontend import Interface
 
-isFinish = 0
+is_finish = 0
 
-while not(isFinish):
-    inputWord = input().split()
-    if inputWord == []:
+while not(is_finish):
+    input_word = input().split()
+    if input_word == []:
     	continue
-    if inputWord[0] == 'exit':
-        isFinish = 1
-    elif inputWord[0] == 'caesar':
-        if   inputWord[1] == '-e':
-            interface.CaesarCipherCommon(inputWord[2], inputWord[3], int(inputWord[4]), 1)
-        elif inputWord[1] == '-d':
-            interface.CaesarCipherCommon(inputWord[2], inputWord[3], int(inputWord[4]), 0)
-        elif inputWord[1] == '-h':
-        	interface.CaesarCipherHack(inputWord[2], inputWord[3])
+    if input_word[0] == 'exit':
+        is_finish = 1
+    elif input_word[0] == 'caesar':
+        if   input_word[1] == '-e':
+            Interface.caesar_cipher_common(input_word[2], input_word[3], int(input_word[4]), 1)
+        elif input_word[1] == '-d':
+            Interface.caesar_cipher_common(input_word[2], input_word[3], int(input_word[4]), 0)
+        elif input_word[1] == '-h':
+        	Interface.caesar_cipher_hack(input_word[2], input_word[3])
         else:
             print('There is no such command')
-    elif inputWord[0] == 'vigener':
-        if   inputWord[1] == '-e':
-            interface.VegenerCipherCommon(inputWord[2], inputWord[3], inputWord[4], 1)
-        elif inputWord[1] == '-d':
-            interface.VegenerCipherCommon(inputWord[2], inputWord[3], inputWord[4], 0)
+    elif input_word[0] == 'vigener':
+        if   input_word[1] == '-e':
+            Interface.vegener_cipher_common(input_word[2], input_word[3], input_word[4], 1)
+        elif input_word[1] == '-d':
+            Interface.vegener_cipher_common(input_word[2], input_word[3], input_word[4], 0)
         else:
             print('There is no such command')
-    elif inputWord[0] == 'vernam':
-        if inputWord[1] == '-e':
-            interface.VernamCommon(inputWord[2], inputWord[3], 0, inputWord[4], 1)
-        elif inputWord[1] == '-eg':
-            interface.VernamCommon(inputWord[2], inputWord[3], 1, inputWord[4], 1)
-        elif inputWord[1] == '-d':
-            interface.VernamCommon(inputWord[2], inputWord[3], 0, inputWord[4], 1)
+    elif input_word[0] == 'vernam':
+        if input_word[1] == '-e':
+            Interface.vernam_common(input_word[2], input_word[3], 0, input_word[4], 1)
+        elif input_word[1] == '-eg':
+            Interface.vernam_common(input_word[2], input_word[3], 1, input_word[4], 1)
+        elif input_word[1] == '-d':
+            Interface.vernam_common(input_word[2], input_word[3], 0, input_word[4], 1)
         else:
             print('There is no such command')
     else:

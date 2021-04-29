@@ -1,9 +1,9 @@
 import unittest
-from alphabet import alphabet
-from alphabet import englishString
+from alphabet import Alphabet
+from alphabet import EnglishString
 
-class alphabetTest(unittest.TestCase):
-	def _testCommon(self, alph, en, direction):
+class AlphabetTest(unittest.TestCase):
+	def _test_сommon(self, alph, en, direction):
 		if   direction == 'checkNumToChars':
 			for i in range(len(en)):
 				self.assertEqual(alph[i], en[i])
@@ -11,70 +11,70 @@ class alphabetTest(unittest.TestCase):
 			for i in range(len(en)):
 				self.assertEqual(alph[en[i]], i)
 
-	def _testBuiltInFunctions(self, testingMethod, direction):
-		alph = alphabet()
+	def _test_built_in_functions(self, testing_method, direction):
+		alph = Alphabet()
 		
-		if   testingMethod == 'small':
-			alph.createSmall()
-			en = englishString.small()
-		elif testingMethod == 'smallAndBig':
-			alph.createSmallAndBig()
-			en = englishString.smallAndBig()
-		elif testingMethod == 'commonChars':
-			alph.createCommonChars()
-			en = englishString.commonChars()
-		elif testingMethod == 'create':
-			en = englishString.small()
+		if   testing_method == 'small':
+			alph.create_small()
+			en = EnglishString.small()
+		elif testing_method == 'smallAndBig':
+			alph.create_small_and_big()
+			en = EnglishString.small_and_big()
+		elif testing_method == 'commonChars':
+			alph.create_common_chars()
+			en = EnglishString.common_chars()
+		elif testing_method == 'create':
+			en = EnglishString.small()
 			alph.create(en)
 
-		self._testCommon(alph, en, direction)
+		self._test_сommon(alph, en, direction)
 
-	def test_createSmallPreTest(self):
-		alph = alphabet()
-		alph.createSmall()
+	def test_create_small_pre_test(self):
+		alph = Alphabet()
+		alph.create_small()
 
 		with self.assertRaises(KeyError):
 			alph[69]
 		with self.assertRaises(KeyError):
 			alph["ad"]
 
-	def test_createSmallNumToChars(self):
-		self._testBuiltInFunctions('small', 'checkNumToChars')
+	def test_create_small_num_to_chars(self):
+		self._test_built_in_functions('small', 'checkNumToChars')
 
-	def test_createSmallCharsToNum(self):
-		self._testBuiltInFunctions('small', 'checkCharsToNum')
+	def test_create_small_chars_to_num(self):
+		self._test_built_in_functions('small', 'checkCharsToNum')
 
-	def test_createSmallAndBigPreTest(self):
-		alph = alphabet()
-		alph.createSmallAndBig()
+	def test_create_small_and_big_pre_test(self):
+		alph = Alphabet()
+		alph.create_small_and_big()
 		with self.assertRaises(KeyError):
 			alph[69]
 		with self.assertRaises(KeyError):
 			alph["ad"]
 
-	def test_createSmallAndBigNumToChars(self):
-		self._testBuiltInFunctions('smallAndBig', 'checkNumToChars')
+	def test_create_small_and_big_num_to_chars(self):
+		self._test_built_in_functions('smallAndBig', 'checkNumToChars')
 
-	def test_createSmallAndBigCharsToNum(self):
-		self._testBuiltInFunctions('smallAndBig', 'checkCharsToNum')
+	def test_create_small_and_big_Chars_to_num(self):
+		self._test_built_in_functions('smallAndBig', 'checkCharsToNum')
 
-	def test_createCommonCharsPreTest(self):
-		alph = alphabet()
-		alph.createCommonChars()
+	def test_create_common_chars_pre_test(self):
+		alph = Alphabet()
+		alph.create_common_chars()
 		with self.assertRaises(KeyError):
 			alph[1000]
 		with self.assertRaises(KeyError):
 			alph["ad"]
 
-	def test_createCommonCharsNumToChars(self):
-		self._testBuiltInFunctions('commonChars', 'checkNumToChars')
+	def test_create_common_chars_num_to_chars(self):
+		self._test_built_in_functions('commonChars', 'checkNumToChars')
 
-	def test_createCommonCharsCharsToNum(self):
-		self._testBuiltInFunctions('commonChars', 'checkCharsToNum')
+	def test_create_common_chars_chars_to_num(self):
+		self._test_built_in_functions('commonChars', 'checkCharsToNum')
 
-	def test_createPreTest(self):
-		alph = alphabet()
-		en = englishString.small()
+	def test_create_pre_test(self):
+		alph = Alphabet()
+		en = EnglishString.small()
 		alph.create(en)
 
 		with self.assertRaises(KeyError):
@@ -82,8 +82,8 @@ class alphabetTest(unittest.TestCase):
 		with self.assertRaises(KeyError):
 			alph["ad"]
 
-	def test_createNumToChars(self):
-		self._testBuiltInFunctions('create', 'checkNumToChars')
+	def test_create_num_to_chars(self):
+		self._test_built_in_functions('create', 'checkNumToChars')
 
-	def test_createCharsToNum(self):
-		self._testBuiltInFunctions('create', 'checkCharsToNum')
+	def test_create_chars_to_num(self):
+		self._test_built_in_functions('create', 'checkCharsToNum')

@@ -1,1 +1,1 @@
-from Vernam.Vernam import Vernam
+from vernam.vernam import Vernam

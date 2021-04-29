@@ -1,53 +1,53 @@
-What's "meh"
+Grkd'c "wor"
 
-Forced indentation. Some love it because it enforces consistency and a degree of readability. Some hate it because it enforces the wrong consistency. Objectively it's neither good nor bad.
-Dynamic typing. There are lots of dynamically-typed languages and lots of statically-typed languages. Which kind of typing is better isn't a Python debate, it's a general programming debate.
-What's bad
+Pybmon sxnoxdkdsyx. Cywo vyfo sd lomkeco sd oxpybmoc myxcscdoxmi kxn k noqboo yp boknklsvsdi. Cywo rkdo sd lomkeco sd oxpybmoc dro gbyxq myxcscdoxmi. Yltomdsfovi sd'c xosdrob qyyn xyb lkn.
+Nixkwsm dizsxq. Drobo kbo vydc yp nixkwsmkvvi-dizon vkxqekqoc kxn vydc yp cdkdsmkvvi-dizon vkxqekqoc. Grsmr usxn yp dizsxq sc loddob scx'd k Zidryx nolkdo, sd'c k qoxobkv zbyqbkwwsxq nolkdo.
+Grkd'c lkn
 
-400 (more or less) ways to interpolate strings. This prints "Hello Robin!" 3 times:
+400 (wybo yb vocc) gkic dy sxdobzyvkdo cdbsxqc. Drsc zbsxdc "Rovvy Bylsx!" 3 dswoc:
 
-user = {'name': "Robin"}
-print(f"Hello {user['name']}!")
-print("Hello {name}!".format(**user))
-print("Hello %(name)s!" % user)
-If there was a unique and obvious use-case for each of these then that would be one thing, but there's not.
+ecob = {'xkwo': "Bylsx"}
+zbsxd(p"Rovvy {ecob['xkwo']}!")
+zbsxd("Rovvy {xkwo}!".pybwkd(**ecob))
+zbsxd("Rovvy %(xkwo)c!" % ecob)
+Sp drobo gkc k exsaeo kxn ylfsyec eco-mkco pyb okmr yp droco drox drkd gyevn lo yxo drsxq, led drobo'c xyd.
 
-69 top-level functions that you have to just memorize. GvR's explanation makes sense in theory, but is really annoying in practice.
+69 dyz-vofov pexmdsyxc drkd iye rkfo dy tecd wowybsjo. QfB'c ohzvkxkdsyx wkuoc coxco sx droybi, led sc bokvvi kxxyisxq sx zbkmdsmo.
 
-map and enumerate are not interchangeable with list, though 99% of the time you end up converting them to lists with list(). Alternatively you use a list comprehension, which, speaking of...
+wkz kxn oxewobkdo kbo xyd sxdobmrkxqoklvo gsdr vscd, dryeqr 99% yp dro dswo iye oxn ez myxfobdsxq drow dy vscdc gsdr vscd(). Kvdobxkdsfovi iye eco k vscd mywzboroxcsyx, grsmr, czokusxq yp...
 
-List comprehensions are held up as an excellent recent-ish addition to Python. People say they're readable. That's true for simple examples (e.g. [x**2 for x in range(10)]) but horribly untrue for slightly more complex examples (e.g. [[row[i] for row in matrix] for i in range(4)]). I chalk this up to...
+Vscd mywzboroxcsyxc kbo rovn ez kc kx ohmovvoxd bomoxd-scr knnsdsyx dy Zidryx. Zoyzvo cki droi'bo boknklvo. Drkd'c dbeo pyb cswzvo ohkwzvoc (o.q. [h**2 pyb h sx bkxqo(10)]) led rybbslvi exdbeo pyb cvsqrdvi wybo mywzvoh ohkwzvoc (o.q. [[byg[s] pyb byg sx wkdbsh] pyb s sx bkxqo(4)]). S mrkvu drsc ez dy...
 
-Weird ordering in ternary/one-line expressions. Most languages follow a consistent order where first you declare conditions, then you do stuff based the on those conditions:
+Gosbn ybnobsxq sx dobxkbi/yxo-vsxo ohzboccsyxc. Wycd vkxqekqoc pyvvyg k myxcscdoxd ybnob grobo psbcd iye nomvkbo myxnsdsyxc, drox iye ny cdepp lkcon dro yx dryco myxnsdsyxc:
 
-if user.isSignedIn then user.greet else error
-for user in signedInUsers do user.greet
-Python does this in the opposite order:
+sp ecob.scCsqxonSx drox ecob.qbood ovco obbyb
+pyb ecob sx csqxonSxEcobc ny ecob.qbood
+Zidryx nyoc drsc sx dro yzzycsdo ybnob:
 
-user.greet if user.isSignedIn else error
-[user.greet for user in signedInUsers]
-This is great for simple examples. It's unhelpful for more complex logic where you have to find and look at the middle of the expression before you can really understand what you're reading.
+ecob.qbood sp ecob.scCsqxonSx ovco obbyb
+[ecob.qbood pyb ecob sx csqxonSxEcobc]
+Drsc sc qbokd pyb cswzvo ohkwzvoc. Sd'c exrovzpev pyb wybo mywzvoh vyqsm grobo iye rkfo dy psxn kxn vyyu kd dro wsnnvo yp dro ohzboccsyx lopybo iye mkx bokvvi exnobcdkxn grkd iye'bo boknsxq.
 
-Syntax for tuples. If you write a single-item (tuple,) but forget the trailing comma, it's no longer a tuple but an expression. This is a really easy mistake to make. Considering the only difference between tuples and lists is mutability, it would make much more sense to use the same [syntax] as lists, which does not require a trailing comma, and add a freeze or immutable method. Speaking of...
+Cixdkh pyb dezvoc. Sp iye gbsdo k csxqvo-sdow (dezvo,) led pybqod dro dbksvsxq mywwk, sd'c xy vyxqob k dezvo led kx ohzboccsyx. Drsc sc k bokvvi okci wscdkuo dy wkuo. Myxcsnobsxq dro yxvi nsppoboxmo lodgoox dezvoc kxn vscdc sc wedklsvsdi, sd gyevn wkuo wemr wybo coxco dy eco dro ckwo [cixdkh] kc vscdc, grsmr nyoc xyd boaesbo k dbksvsxq mywwk, kxn knn k pboojo yb swwedklvo wodryn. Czokusxq yp...
 
-There's no way to make dicts or complex objects immutable.
+Drobo'c xy gki dy wkuo nsmdc yb mywzvoh yltomdc swwedklvo.
 
-Regular expressions require a lot of boilerplate:
+Boqevkb ohzboccsyxc boaesbo k vyd yp lysvobzvkdo:
 
-re.compile(r"regex", re.I | re.M)
-Compared to JavaScript or Ruby:
+bo.mywzsvo(b"boqoh", bo.S | bo.W)
+Mywzkbon dy TkfkCmbszd yb Beli:
 
-/regex/ig
-The goofy string literal syntaxes: f'', u'', b'', r''.
+/boqoh/sq
+Dro qyypi cdbsxq vsdobkv cixdkhoc: p'', e'', l'', b''.
 
-The many "magic" double-underscore attributes that you just have to memorize.
+Dro wkxi "wkqsm" nyelvo-exnobcmybo kddbsledoc drkd iye tecd rkfo dy wowybsjo.
 
-You can't reliably catch all errors and their messages in one statement. Instead you have to use something like sys.exc_info()[0].
+Iye mkx'd bovsklvi mkdmr kvv obbybc kxn drosb wocckqoc sx yxo cdkdowoxd. Sxcdokn iye rkfo dy eco cywodrsxq vsuo cic.ohm_sxpy()[0].
 
-What's bad about the culture
+Grkd'c lkn klyed dro mevdebo
 
-Most programmers will acknowledge criticisms of their favorite language. Pythonists will say, "You just don't understand Python."
+Wycd zbyqbkwwobc gsvv kmuxygvonqo mbsdsmscwc yp drosb pkfybsdo vkxqekqo. Zidryxscdc gsvv cki, "Iye tecd nyx'd exnobcdkxn Zidryx."
 
-Most programmers will say that a piece of code is shoddy because it is inefficient or hard to read. Pythonists will also tell you whether or not they think it's "Pythonic", which feels about as helpful as someone saying your taste in music "isn't cultured enough."
+Wycd zbyqbkwwobc gsvv cki drkd k zsomo yp myno sc crynni lomkeco sd sc sxoppsmsoxd yb rkbn dy bokn. Zidryxscdc gsvv kvcy dovv iye grodrob yb xyd droi drsxu sd'c "Zidryxsm", grsmr poovc klyed kc rovzpev kc cywoyxo ckisxq iyeb dkcdo sx wecsm "scx'd mevdebon oxyeqr."
 
-Pythonists have a bit of a superiority complex.
+Zidryxscdc rkfo k lsd yp k cezobsybsdi mywzvoh.

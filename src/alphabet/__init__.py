@@ -1,3 +1,3 @@
-from alphabet.english  import englishString
-from alphabet.dicting  import dicting
-from alphabet.alphabet import alphabet
+from alphabet.english  import EnglishString
+from alphabet.dicting  import Dicting
+from alphabet.alphabet import Alphabet

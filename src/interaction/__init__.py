@@ -1,1 +1,1 @@
-from interaction.interaction import interaction
+from interaction.interaction import Interaction

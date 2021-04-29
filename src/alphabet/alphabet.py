@@ -1,27 +1,27 @@
-from alphabet.dicting          import dicting
-from alphabet.english          import englishString
-from alphabet.frequencyEnglish import frequencyEnglish
+from alphabet.dicting          import Dicting
+from alphabet.english          import EnglishString
+from alphabet.frequencyEnglish import FrequencyEnglish
 
-class alphabet(dict):
+class Alphabet(dict):
     frequency = None
 
-    def _copyDict(self, dictionary):
+    def copy_dict(self, dictionary):
         self.clear()
         for i in dictionary:
             self[i] = dictionary[i]
 
     def create(self, alph, freq = None):
-        self._copyDict(dicting.create(alph))
+        self.copy_dict(Dicting.create(alph))
         self.frequency = freq
 
-    def createSmall(self):
-        self.create(englishString.small(), frequencyEnglish.getFrequency())
+    def create_small(self):
+        self.create(EnglishString.small(), FrequencyEnglish.get_frequency())
 
-    def createSmallAndBig(self):
-        self.create(englishString.smallAndBig())
+    def create_small_and_big(self):
+        self.create(EnglishString.small_and_big())
 
-    def createCommonChars(self):
-        self.create(englishString.commonChars())
+    def create_common_chars(self):
+        self.create(EnglishString.common_chars())
 
-    def getFrequency(self):
+    def get_frequency(self):
         return self.frequency

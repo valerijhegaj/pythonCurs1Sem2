@@ -1,12 +1,12 @@
 import unittest
-from VegenerCipher  import VegenerCipher
-from alphabet       import alphabet
-from alphabet       import englishString
+from vegener_cipher import VegenerCipher
+from alphabet       import Alphabet
+from alphabet       import EnglishString
 
 class VegenerCipherTest(unittest.TestCase):
-    def commonTest(self, is_encry):
-        alph = alphabet()
-        alph.create(englishString.small().upper())
+    def common_test(self, is_encry):
+        alph = Alphabet()
+        alph.create(EnglishString.small().upper())
         if is_encry:
             encrypted = VegenerCipher.encryption(alph, "LEMON", "ATTACKATDAWN")
             self.assertEqual(encrypted, "LXFOPVEFRNHR")
@@ -15,7 +15,7 @@ class VegenerCipherTest(unittest.TestCase):
             self.assertEqual(decrypted, "ATTACKATDAWN")
 
     def test_encryption(self):
-        self.commonTest(1)
+        self.common_test(1)
 
     def test_decryption(self):
-        self.commonTest(0)
+        self.common_test(0)

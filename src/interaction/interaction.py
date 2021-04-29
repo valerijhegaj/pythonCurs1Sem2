@@ -1,4 +1,4 @@
-class interaction:
+class Interaction:
 	def read(path):
 	    file = open(path, 'r')
 	    data = file.read()

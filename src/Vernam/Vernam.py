@@ -7,6 +7,8 @@ class Vernam:
         for i in range(len(text)):
             if text[i] in {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'}:
                 ans += text[i]
+            elif alphabet.get(text[i], -1) == -1:
+                ans += text[i]
             else:
                 k = alphabet[key[i]]
                 t = alphabet[text[i]]
@@ -16,7 +18,7 @@ class Vernam:
     def decryption(alphabet, key, text):
         return Vernam.encryption(alphabet, key, text)
 
-    def generateKey(alphabet, l):
+    def generate_key(alphabet, l):
         ans = ''
         n = len(alphabet) // 2
         for i in range(l):

@@ -1,53 +1,53 @@
-from alphabet  		import alphabet
-from interaction 	import interaction
-from CaesarCipher 	import CaesarCipher
-from VegenerCipher 	import VegenerCipher
-from Vernam 		import Vernam
+from alphabet  			import Alphabet
+from interaction 		import Interaction
+from caesar_cipher 		import CaesarCipher
+from vegener_cipher 	import VegenerCipher
+from vernam 			import Vernam
 
-class interface:
-	def CaesarCipherCommon(pathToRead, pathToWrite, key, is_encry):
-		en = alphabet()
-		en.createSmall()
-		text = interaction.read(pathToRead)
+class Interface:
+	def caesar_cipher_common(path_to_read, path_to_write, key, is_encry):
+		en = Alphabet()
+		en.create_small()
+		text = Interaction.read(path_to_read)
 		if is_encry:
 			text = CaesarCipher.encryption(key, en, text)
 		else:
 			text = CaesarCipher.decryption(key, en, text)
-		interaction.write(pathToWrite, text)
+		Interaction.write(path_to_write, text)
 
-	def CaesarCipherHack(pathToRead, pathToWrite):
-		en = alphabet()
-		en.createSmall()
-		frequency = en.getFrequency()
-		text = interaction.read(pathToRead)
+	def caesar_cipher_hack(path_to_read, path_to_write):
+		en = Alphabet()
+		en.create_small()
+		frequency = en.get_frequency()
+		text = Interaction.read(path_to_read)
 		text = CaesarCipher.hack(en, frequency, text)
-		interaction.write(pathToWrite, text)
+		Interaction.write(path_to_write, text)
 
-	def VegenerCipherCommon(pathToRead, pathToWrite, key, is_encry):
-		en = alphabet()
-		en.createSmallAndBig()
-		text = interaction.read(pathToRead)
+	def vegener_cipher_common(path_to_read, path_to_write, key, is_encry):
+		en = Alphabet()
+		en.create_small_and_big()
+		text = Interaction.read(path_to_read)
 		if is_encry:
 			text = VegenerCipher.encryption(en, key, text)
 		else:
 			text = VegenerCipher.decryption(en, key, text)
-		interaction.write(pathToWrite, text)
+		Interaction.write(path_to_write, text)
 
-	def VernamCommon(pathToRead, pathToKey, is_generate, pathToWrite, is_encry):
-		en = alphabet()
-		en.createCommonChars()
-		text = interaction.read(pathToRead)
+	def vernam_common(path_to_read, path_to_key, is_generate, path_to_write, is_encry):
+		en = Alphabet()
+		en.create_common_chars()
+		text = Interaction.read(path_to_read)
 
 		if is_generate:
 			l = len(text)
-			key = Vernam.generateKey(en, l)
-			interaction.write(pathToKey, key)
+			key = Vernam.generate_key(en, l)
+			Interaction.write(path_to_key, key)
 		else:
-			key = interaction.read(pathToKey)
+			key = Interaction.read(path_to_key)
 
 		if is_encry:
 			text = Vernam.encryption(en, key, text)
 		else:
 			text = Vernam.decryption(en, key, text)
 
-		interaction.write(pathToWrite, text)
+		Interaction.write(path_to_write, text)

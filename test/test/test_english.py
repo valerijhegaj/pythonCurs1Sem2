@@ -1,11 +1,11 @@
 import unittest
-from alphabet import englishString
+from alphabet import EnglishString
 
-class englishTest(unittest.TestCase):
+class EnglishTest(unittest.TestCase):
 	english = 'abcdefghijklmnopqrstuvwxyz'
 	
 	def test_small(self):
-		self.assertEqual(englishString.small(), self.english)
+		self.assertEqual(EnglishString.small(), self.english)
 
-	def test_smallAndBig(self):
-		self.assertEqual(englishString.smallAndBig(), self.english + self.english.upper())
+	def test_small_and_big(self):
+		self.assertEqual(EnglishString.small_and_big(), self.english + self.english.upper())

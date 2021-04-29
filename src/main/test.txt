@@ -1,0 +1,26 @@
+Naming Conventions
+“Explicit is better than implicit.”
+
+— The Zen of Python
+When you write Python code, you have to name a lot of things: variables, functions, classes, packages, and so on. Choosing sensible names will save you time and energy later. You’ll be able to figure out, from the name, what a certain variable, function, or class represents. You’ll also avoid using inappropriate names that might result in errors that are difficult to debug.
+
+Note: Never use l, O, or I single letter names as these can be mistaken for 1 and 0, depending on typeface:
+
+O = 2  # This may look like you're trying to reassign 2 to zero
+Naming Styles
+The table below outlines some of the common naming styles in Python code and when you should use them:
+
+Type	Naming Convention	Examples
+Function	Use a lowercase word or words. Separate words by underscores to improve readability.	function, my_function
+Variable	Use a lowercase single letter, word, or words. Separate words with underscores to improve readability.	x, var, my_variable
+Class	Start each word with a capital letter. Do not separate words with underscores. This style is called camel case.	Model, MyClass
+Method	Use a lowercase word or words. Separate words with underscores to improve readability.	class_method, method
+Constant	Use an uppercase single letter, word, or words. Separate words with underscores to improve readability.	CONSTANT, MY_CONSTANT, MY_LONG_CONSTANT
+Module	Use a short, lowercase word or words. Separate words with underscores to improve readability.	module.py, my_module.py
+Package	Use a short, lowercase word or words. Do not separate words with underscores.	package, mypackage
+These are some of the common naming conventions and examples of how to use them. But in order to write readable code, you still have to be careful with your choice of letters and words. In addition to choosing the correct naming styles in your code, you also have to choose the names carefully. Below are a few pointers on how to do this as effectively as possible.
+
+How to Choose Names
+Choosing names for your variables, functions, classes, and so forth can be challenging. You should put a fair amount of thought into your naming choices when writing code as it will make your code more readable. The best way to name your objects in Python is to use descriptive names to make it clear what the object represents.
+
+When naming variables, you may be tempted to choose simple, single-letter lowercase names, like x. But, unless you’re using x as the argument of a mathematical function, it’s not clear what x represents. Imagine you are storing a person’s name as a string, and you want to use string slicing to format their name differently. You could end up with something like this:
