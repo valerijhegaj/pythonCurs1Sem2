@@ -1,18 +1,22 @@
 Специализация команд
 1.exit - завершает работу программы
-2.caesar [-e | -d | -h] pathToRead pathToWrite [shift]
+2.caesar [-e | -d | -h | -ei] pathToRead pathToWrite [shift]
     -e - шифрование шифром
     -d - дешифрование
     -h - взлом шифра цезаря (shift не надо вводить)
+    -ei - шифрование по ссылке в интернет pathToRead (если сайт меняется во времени, то не зашифрует)
     shift - сдвиг шифрования
-3.vigener [-e | -d] pathToRead pathToWrite key
+3.vigener [-e | -d | -ei] pathToRead pathToWrite key
     -e - шифрование
     -d - дешифрование
+    -ei - шифрование по ссылке в интернет pathToRead (если сайт меняется во времени, то не зашифрует)
     keyWord - ключевое слово
-4.vernam [-e | -eg | -d] pathToRead pathToKey pathToWrite
+4.vernam [-e | -eg | -d | -ei | -egi] pathToRead pathToKey pathToWrite
     -e - шифрование
     -eg - шифрование с генерацией ключа 
     -d - дешифрование
+    -ei - шифрование по ссылке в интернет pathToRead (если сайт меняется во времени, то не зашифрует)
+    -egi - шифрование с генерацией ключа по ссылке в интернет
     path - путь к файлу
     pathToKey - путь к ключу (должен совпадать по длине с файлом)
 
@@ -22,5 +26,7 @@
 запуск тестов, перейти в test/
 	python3 testing.py
 
-используемые внешние модули: random, sys, os, unittest
+используемые внешние модули: random, sys, os, unittest, io, lxml, requests, time
 (все что другое подключается это подключение файлов, использована схема подключения с использованием __init__.py)
+
+//функционал веба тестился на http://example.com (статитческий), и http://vk.com (меняющийся сайт)

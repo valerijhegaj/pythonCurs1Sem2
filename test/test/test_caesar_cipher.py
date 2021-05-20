@@ -36,7 +36,8 @@ class CaesarCipherTest(unittest.TestCase):
 		n = len(en)
 		alph = Alphabet()
 		alph.create_small()
-		text = Interaction.read("test_analyth.txt")
+		reader = Interaction()
+		text = reader.read("test_analyth.txt")
 		for i in range(n):
 			_text = CaesarCipher.encryption(i, alph, text)
 			self.assertEqual(text, CaesarCipher.hack(alph, alph.get_frequency(), _text))

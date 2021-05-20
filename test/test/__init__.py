@@ -6,3 +6,5 @@ from test.test_interaction			import InteractionTest
 from test.test_vegener_cipher		import VegenerCipherTest
 from test.test_vernam				import VernamTest
 from test.test_interface			import InterfaceTest
+from test.test_html_parser			import ParserTest
+from test.test_web					import WebTest
