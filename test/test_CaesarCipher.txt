@@ -1,0 +1,53 @@
+Grkd'c "wor"
+
+Pybmon sxnoxdkdsyx. Cywo vyfo sd lomkeco sd oxpybmoc myxcscdoxmi kxn k noqboo yp boknklsvsdi. Cywo rkdo sd lomkeco sd oxpybmoc dro gbyxq myxcscdoxmi. Yltomdsfovi sd'c xosdrob qyyn xyb lkn.
+Nixkwsm dizsxq. Drobo kbo vydc yp nixkwsmkvvi-dizon vkxqekqoc kxn vydc yp cdkdsmkvvi-dizon vkxqekqoc. Grsmr usxn yp dizsxq sc loddob scx'd k Zidryx nolkdo, sd'c k qoxobkv zbyqbkwwsxq nolkdo.
+Grkd'c lkn
+
+400 (wybo yb vocc) gkic dy sxdobzyvkdo cdbsxqc. Drsc zbsxdc "Rovvy Bylsx!" 3 dswoc:
+
+ecob = {'xkwo': "Bylsx"}
+zbsxd(p"Rovvy {ecob['xkwo']}!")
+zbsxd("Rovvy {xkwo}!".pybwkd(**ecob))
+zbsxd("Rovvy %(xkwo)c!" % ecob)
+Sp drobo gkc k exsaeo kxn ylfsyec eco-mkco pyb okmr yp droco drox drkd gyevn lo yxo drsxq, led drobo'c xyd.
+
+69 dyz-vofov pexmdsyxc drkd iye rkfo dy tecd wowybsjo. QfB'c ohzvkxkdsyx wkuoc coxco sx droybi, led sc bokvvi kxxyisxq sx zbkmdsmo.
+
+wkz kxn oxewobkdo kbo xyd sxdobmrkxqoklvo gsdr vscd, dryeqr 99% yp dro dswo iye oxn ez myxfobdsxq drow dy vscdc gsdr vscd(). Kvdobxkdsfovi iye eco k vscd mywzboroxcsyx, grsmr, czokusxq yp...
+
+Vscd mywzboroxcsyxc kbo rovn ez kc kx ohmovvoxd bomoxd-scr knnsdsyx dy Zidryx. Zoyzvo cki droi'bo boknklvo. Drkd'c dbeo pyb cswzvo ohkwzvoc (o.q. [h**2 pyb h sx bkxqo(10)]) led rybbslvi exdbeo pyb cvsqrdvi wybo mywzvoh ohkwzvoc (o.q. [[byg[s] pyb byg sx wkdbsh] pyb s sx bkxqo(4)]). S mrkvu drsc ez dy...
+
+Gosbn ybnobsxq sx dobxkbi/yxo-vsxo ohzboccsyxc. Wycd vkxqekqoc pyvvyg k myxcscdoxd ybnob grobo psbcd iye nomvkbo myxnsdsyxc, drox iye ny cdepp lkcon dro yx dryco myxnsdsyxc:
+
+sp ecob.scCsqxonSx drox ecob.qbood ovco obbyb
+pyb ecob sx csqxonSxEcobc ny ecob.qbood
+Zidryx nyoc drsc sx dro yzzycsdo ybnob:
+
+ecob.qbood sp ecob.scCsqxonSx ovco obbyb
+[ecob.qbood pyb ecob sx csqxonSxEcobc]
+Drsc sc qbokd pyb cswzvo ohkwzvoc. Sd'c exrovzpev pyb wybo mywzvoh vyqsm grobo iye rkfo dy psxn kxn vyyu kd dro wsnnvo yp dro ohzboccsyx lopybo iye mkx bokvvi exnobcdkxn grkd iye'bo boknsxq.
+
+Cixdkh pyb dezvoc. Sp iye gbsdo k csxqvo-sdow (dezvo,) led pybqod dro dbksvsxq mywwk, sd'c xy vyxqob k dezvo led kx ohzboccsyx. Drsc sc k bokvvi okci wscdkuo dy wkuo. Myxcsnobsxq dro yxvi nsppoboxmo lodgoox dezvoc kxn vscdc sc wedklsvsdi, sd gyevn wkuo wemr wybo coxco dy eco dro ckwo [cixdkh] kc vscdc, grsmr nyoc xyd boaesbo k dbksvsxq mywwk, kxn knn k pboojo yb swwedklvo wodryn. Czokusxq yp...
+
+Drobo'c xy gki dy wkuo nsmdc yb mywzvoh yltomdc swwedklvo.
+
+Boqevkb ohzboccsyxc boaesbo k vyd yp lysvobzvkdo:
+
+bo.mywzsvo(b"boqoh", bo.S | bo.W)
+Mywzkbon dy TkfkCmbszd yb Beli:
+
+/boqoh/sq
+Dro qyypi cdbsxq vsdobkv cixdkhoc: p'', e'', l'', b''.
+
+Dro wkxi "wkqsm" nyelvo-exnobcmybo kddbsledoc drkd iye tecd rkfo dy wowybsjo.
+
+Iye mkx'd bovsklvi mkdmr kvv obbybc kxn drosb wocckqoc sx yxo cdkdowoxd. Sxcdokn iye rkfo dy eco cywodrsxq vsuo cic.ohm_sxpy()[0].
+
+Grkd'c lkn klyed dro mevdebo
+
+Wycd zbyqbkwwobc gsvv kmuxygvonqo mbsdsmscwc yp drosb pkfybsdo vkxqekqo. Zidryxscdc gsvv cki, "Iye tecd nyx'd exnobcdkxn Zidryx."
+
+Wycd zbyqbkwwobc gsvv cki drkd k zsomo yp myno sc crynni lomkeco sd sc sxoppsmsoxd yb rkbn dy bokn. Zidryxscdc gsvv kvcy dovv iye grodrob yb xyd droi drsxu sd'c "Zidryxsm", grsmr poovc klyed kc rovzpev kc cywoyxo ckisxq iyeb dkcdo sx wecsm "scx'd mevdebon oxyeqr."
+
+Zidryxscdc rkfo k lsd yp k cezobsybsdi mywzvoh.
